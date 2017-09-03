@@ -62,7 +62,7 @@ import javafx.stage.Stage;
 import javax.swing.JTextField;
 
 /**
- * FXML Controller class
+ * FXML Controller class for the main window
  *
  * @author Station Manager
  */
