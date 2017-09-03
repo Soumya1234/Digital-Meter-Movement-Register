@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="298.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business_Code.CreateNewVendorController">
+   <children>
+      <Label layoutX="44.0" layoutY="40.0" text="Name" />
+      <Label layoutX="44.0" layoutY="75.0" text="Vendor Category" />
+      <Label layoutX="44.0" layoutY="110.0" text="Address" />
+      <Label layoutX="44.0" layoutY="145.0" text="Pincode" />
+      <Label layoutX="44.0" layoutY="180.0" text="Phone" />
+      <Label layoutX="44.0" layoutY="215.0" text="Email" />
+      <TextField fx:id="New_Vendor_Name" layoutX="181.0" layoutY="36.0" prefHeight="25.0" prefWidth="234.0" promptText="Name" />
+      <ComboBox fx:id="New_Vendor_Category" layoutX="181.0" layoutY="71.0" prefWidth="150.0" promptText="Select" />
+      <TextField fx:id="New_Vendor_Address" layoutX="182.0" layoutY="106.0" prefHeight="25.0" prefWidth="281.0" promptText="Address" />
+      <TextField fx:id="New_Vendor_Pin" layoutX="182.0" layoutY="141.0" promptText="Pin" />
+      <TextField fx:id="New_Vendor_Mobile" layoutX="182.0" layoutY="176.0" promptText="Mobile" />
+      <TextField fx:id="New_Vendor_Email" layoutX="182.0" layoutY="211.0" prefHeight="25.0" prefWidth="218.0" promptText="Email" />
+      <Button fx:id="New_Vendor_OK_Button" layoutX="382.0" layoutY="251.0" mnemonicParsing="false" onAction="#handle_New_Vendor_OK_Button_Event" prefHeight="25.0" prefWidth="102.0" text="OK" />
+   </children>
+</AnchorPane>

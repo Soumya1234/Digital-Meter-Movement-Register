@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="460.0" prefWidth="628.0" scaleShape="false" stylesheets="@Tabpane.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business_Code.DeviceManagerController">
+   <children>
+      <TabPane fx:id="mainTab" layoutY="23.0" prefHeight="421.0" prefWidth="642.0" scaleShape="false" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Receive">
+               <content>
+                  <AnchorPane prefHeight="401.0" prefWidth="507.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%);">
+                     <children>
+                        <Pane prefHeight="333.0" prefWidth="481.0" style="-fx-border-color: black; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label layoutX="39.0" layoutY="30.0" text="Starting Meter Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="65.0" text="Last Meter Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="100.0" text="Meter Phase" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="135.0" text="Received By" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="170.0" text="Date of Receive" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="205.0" text="Order Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="240.0" text="Order Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="39.0" layoutY="275.0" text="ERP Reference" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="R_Starting_Meter_No" layoutX="209.0" layoutY="28.0" promptText="Starting Meter Number" />
+                              <TextField fx:id="R_Last_Meter_No" layoutX="209.0" layoutY="63.0" promptText="Last Meter Number" />
+                              <TextField fx:id="R_Order_No" layoutX="209.0" layoutY="203.0" promptText="WO/PO Number" />
+                              <TextField fx:id="R_ERP_Reference" layoutX="209.0" layoutY="273.0" promptText="ERP Reference Number" />
+                              <ComboBox fx:id="R_Meter_Phase" layoutX="209.0" layoutY="98.0" prefHeight="25.0" prefWidth="87.0" promptText="Select" />
+                              <ComboBox fx:id="R_Received_By" layoutX="209.0" layoutY="133.0" prefWidth="150.0" promptText="Select" />
+                              <DatePicker fx:id="R_Receive_Date" layoutX="209.0" layoutY="168.0" prefHeight="25.0" prefWidth="150.0" promptText="Receive Date" />
+                              <DatePicker fx:id="R_Order_Date" layoutX="209.0" layoutY="238.0" prefHeight="25.0" prefWidth="149.0" promptText="WO/PO Date" />
+                           </children></Pane>
+                        <Button fx:id="R_Receive_Button" layoutX="391.0" layoutY="377.0" mnemonicParsing="false" onAction="#handle_Receive_Button_Event" prefHeight="25.0" prefWidth="102.0" text="Receive" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="391.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="377.0" />
+                        <Button fx:id="R_Receive_Used_Meter_Button" layoutX="254.0" layoutY="377.0" mnemonicParsing="false" onAction="#handle_R_Receive_Used_Meter_Button_Event" prefHeight="25.0" prefWidth="129.0" text="Receive Used Meter" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="377.0" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab text="Issue">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%);;">
+                     <children>
+                        <Pane prefHeight="333.0" prefWidth="481.0" style="-fx-border-color: black; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label layoutX="39.0" layoutY="30.0" text="Starting Meter Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="65.0" text="Last Meter Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="100.0" text="Meter Phase" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="135.0" text="Issued To" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="170.0" text="Date of Issue" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="205.0" text="Order Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="240.0" text="Order Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="I_Starting_Meter_No" layoutX="209.0" layoutY="28.0" promptText="Starting Meter Number" />
+                              <TextField fx:id="I_Last_Meter_No" layoutX="209.0" layoutY="63.0" promptText="Last Meter Number" />
+                              <ComboBox fx:id="I_Meter_Phase" layoutX="209.0" layoutY="98.0" prefHeight="25.0" prefWidth="87.0" promptText="Select" />
+                              <ComboBox fx:id="I_Issued_To" layoutX="209.0" layoutY="133.0" prefWidth="150.0" promptText="Select" />
+                              <DatePicker fx:id="I_Issue_Date" layoutX="209.0" layoutY="168.0" prefHeight="25.0" prefWidth="150.0" promptText="Issue Date" />
+                              <TextField fx:id="I_Order_No" layoutX="209.0" layoutY="203.0" promptText="WO/PO Number" />
+                              <DatePicker fx:id="I_Order_Date" layoutX="209.0" layoutY="238.0" prefHeight="25.0" prefWidth="149.0" promptText="WO/PO Date" />
+                              <Label layoutX="39.0" layoutY="275.0" text="Purpose" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="I_Purpose" layoutX="209.0" layoutY="273.0" prefWidth="150.0" promptText="Select" />
+                           </children></Pane>
+                        <Button fx:id="I_Issue_Button" layoutX="393.0" layoutY="378.0" mnemonicParsing="false" onAction="#handle_Issue_Button_Event" prefHeight="25.0" prefWidth="102.0" text="Issue" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="391.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="377.0" />
+                        <Button fx:id="I_Issue_Used_Meter_Button" layoutX="254.0" layoutY="377.0" mnemonicParsing="false" onAction="#handle_Issue_Used_Meter_Button_Event" prefHeight="25.0" prefWidth="129.0" text="Issue Used Meter" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            <Tab text="Utilize">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%);;">
+                     <children>
+                        <Pane prefHeight="333.0" prefWidth="481.0" style="-fx-border-color: black; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label layoutX="39.0" layoutY="30.0" text="Meter Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="65.0" text="Meter Phase" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="100.0" text="Consumer Reference" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="135.0" text="Utilized By" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="205.0" prefHeight="20.0" prefWidth="88.0" text="Purpose" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="U_Utilization_Date" layoutX="209.0" layoutY="168.0" prefHeight="25.0" prefWidth="149.0" promptText="Date of Utilization" />
+                              <Label layoutX="39.0" layoutY="170.0" text="Utilization Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="U_Meter_No" layoutX="209.0" layoutY="28.0" promptText="Meter Number" />
+                              <ComboBox fx:id="U_Meter_Phase" layoutX="209.0" layoutY="63.0" prefHeight="25.0" prefWidth="87.0" promptText="Select" />
+                              <TextField fx:id="U_Consumer_Reference_No" layoutX="209.0" layoutY="98.0" promptText="ID/Installation " />
+                              <ComboBox fx:id="U_Utilized_By" layoutX="208.0" layoutY="133.0" prefWidth="150.0" promptText="Select" />
+                              <ComboBox fx:id="U_Purpose" layoutX="208.0" layoutY="203.0" prefWidth="150.0" promptText="Select" />
+                           </children></Pane>
+                        <Button fx:id="Utilize_Button" layoutX="392.0" layoutY="376.0" mnemonicParsing="false" onAction="#handle_Utilize_Button_Event" prefHeight="25.0" prefWidth="102.0" text="Utilize" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="391.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="377.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Return">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%);;">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="14.0" prefHeight="333.0" prefWidth="481.0" style="-fx-border-color: black; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label layoutX="39.0" layoutY="30.0" text="Meter Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="Ret_Meter_No" layoutX="209.0" layoutY="28.0" promptText="Meter Number" />
+                              <Label layoutX="39.0" layoutY="65.0" text="Meter Phase" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="Ret_Meter_Phase" layoutX="209.0" layoutY="63.0" prefHeight="25.0" prefWidth="87.0" promptText="Select" />
+                              <Label layoutX="39.0" layoutY="100.0" text="Returned By" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="Ret_Returned_By" layoutX="208.0" layoutY="98.0" prefWidth="150.0" promptText="Select" />
+                              <Label layoutX="38.0" layoutY="135.0" text="Order Number" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="170.0" text="Order Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="Ret_Order_No" layoutX="209.0" layoutY="133.0" promptText="WO/PO Number" />
+                              <DatePicker fx:id="Ret_Order_Date" layoutX="209.0" layoutY="168.0" prefHeight="25.0" prefWidth="149.0" promptText="WO/PO Date" />
+                              <Label layoutX="39.0" layoutY="205.0" text="Return Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="Ret_Return_Date" layoutX="209.0" layoutY="203.0" prefHeight="25.0" prefWidth="149.0" promptText="Return Date" />
+                              <Label layoutX="39.0" layoutY="240.0" text="Return Reason" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="Ret_Reason" layoutX="209.0" layoutY="238.0" prefHeight="25.0" prefWidth="208.0" promptText="Reason for Return" />
+                           </children></Pane>
+                        <Button fx:id="Return_Button" layoutX="391.0" layoutY="374.0" mnemonicParsing="false" onAction="#handle_Return_Button_Event" prefHeight="25.0" prefWidth="102.0" text="Return" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="391.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="377.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Reports">
+              <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="510.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%);;">
+                     <children>
+                        <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="510.0">
+                          <panes>
+                            <TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="510.0" style="-fx-background-color: black;" text="Daily Reports">
+                                 <content>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="510.0">
+                                       <children>
+                                          <RadioButton fx:id="Report_Daily_Report_Receive_RadioButton" layoutX="31.0" layoutY="24.0" mnemonicParsing="false" stylesheets="@Tabpane.css" text="Daily Receive Report">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="group" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Report_Daily_Report_Issue_RadioButton" layoutX="31.0" layoutY="73.0" mnemonicParsing="false" text="Daily Issue Report" toggleGroup="$group" />
+                                          <Label layoutX="51.0" layoutY="41.0" text="Run this report after Receiving Meters From the Upper Level Store " />
+                                          <Label layoutX="51.0" layoutY="90.0" text="Run this Report after Issuing Meters to Vendor " />
+                                          <Button fx:id="Report_Daily_Report_OK_Button" layoutX="375.0" layoutY="154.0" mnemonicParsing="false" onAction="#handle_Daily_Report_OK_Button_Event" prefHeight="25.0" prefWidth="102.0" text="OK" />
+                                          <DatePicker fx:id="Report_Daily_Report_Date" layoutX="51.0" layoutY="154.0" />
+                                          <Label layoutX="51.0" layoutY="130.0" text="Report Date" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content></TitledPane>
+                            <TitledPane animated="false" prefHeight="200.0" prefWidth="510.0" text="Stock Reports">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="Report_Stock_Report_Type" layoutX="34.0" layoutY="68.0" prefWidth="150.0" promptText="Select" />
+                                          <Label layoutX="34.0" layoutY="26.0" text="Report Type" />
+                                          <Label layoutX="34.0" layoutY="102.0" text="Vendor " />
+                                          <ComboBox fx:id="Report_Stock_Report_Vendor" layoutX="34.0" layoutY="127.0" prefWidth="150.0" promptText="Select" />
+                                          <Button fx:id="Report_Stock_Report_OK_Button" layoutX="375.0" layoutY="154.0" mnemonicParsing="false" onAction="#handle_Stock_Report_OK_Button_Event" prefHeight="25.0" prefWidth="102.0" text="OK" />
+                                          <Label contentDisplay="CENTER" layoutX="34.0" layoutY="43.0" prefHeight="25.0" prefWidth="453.0" text="Select whether you want to view the stock of CCC store or at the custody of a vendor" wrapText="true" />
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Other Reports">
+                              <content>
+                                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="245.0" prefWidth="508.0">
+                                       <children>
+                                          <RadioButton fx:id="Reports_Other_Reports_NSC" layoutX="50.0" layoutY="28.0" mnemonicParsing="false" text="Meter Utilized For New Service Connections">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="group2" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton fx:id="Reports_Other_Reports_DMR" layoutX="50.0" layoutY="59.0" mnemonicParsing="false" text="Defective Meter Replacement " toggleGroup="$group2" />
+                                          <RadioButton fx:id="Reports_Other_Reports_EMR" layoutX="50.0" layoutY="90.0" mnemonicParsing="false" text="Electromagnetic Meter Replacement" toggleGroup="$group2" />
+                                          <RadioButton fx:id="Reports_Other_Reports_SAP_Updation" layoutX="50.0" layoutY="121.0" mnemonicParsing="false" text="Report for SAP Updation" toggleGroup="$group2" />
+                                          <DatePicker fx:id="Reports_Other_Reports_Date_From" layoutX="336.0" layoutY="39.5" prefHeight="25.0" prefWidth="131.0" promptText="From" />
+                                          <Label layoutX="336.0" layoutY="20.0" text="Date Range" />
+                                          <Label layoutX="336.0" layoutY="68.0" text="To" />
+                                          <DatePicker fx:id="Reports_Other_Reports_Date_To" layoutX="336.0" layoutY="86.0" prefHeight="25.0" prefWidth="131.0" promptText="Upto" />
+                                          <Button fx:id="Reports_Other_Reports_OK_Button" layoutX="376.0" layoutY="155.0" mnemonicParsing="false" onAction="#handle_Other_Reports_OK_Button_Event" prefHeight="25.0" prefWidth="102.0" text="OK" />
+                                          <RadioButton fx:id="Reports_Other_Reports_Issue_and_Receive" layoutX="50.0" layoutY="152.0" mnemonicParsing="false" text="Meters received and issued in a period" toggleGroup="$group2" />
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar fx:id="myMenuBar" layoutY="-2.0" prefHeight="22.0" prefWidth="642.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="New_Vendor_Menu" mnemonicParsing="false" onAction="#handle_New_Vendor_Menu_Item_Event" text="New Vendor" />
+                  <MenuItem fx:id="Create_User_Menu" mnemonicParsing="false" onAction="#handle_Create_User_MenuItem_Event" text="Create User" />
+              <MenuItem fx:id="Close_Menu" mnemonicParsing="false" onAction="#handle_Close_Menu_Item_Event" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem fx:id="Change_Account_Password_Menu" mnemonicParsing="false" onAction="#handle_Change_Account_Password_Menu_Event" text="Change Account Password" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="About_Menu" mnemonicParsing="false" onAction="#handle_About_Menu_Item_Event" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="447.0" text="Logged In As:" />
+      <Label fx:id="User_Name_Text" layoutX="94.0" layoutY="447.0" prefHeight="17.0" prefWidth="127.0" />
+   </children>
+</Pane>

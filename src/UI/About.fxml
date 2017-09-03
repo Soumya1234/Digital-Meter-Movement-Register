@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="238.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business_Code.AboutController">
+   <children>
+      <Label layoutX="21.0" layoutY="20.0" prefHeight="25.0" prefWidth="260.0" text="Digital Meter Movement Register ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="45.0" text="Developed By: Soumyadeep Ganguly                        " />
+      <Label layoutX="222.0" layoutY="45.0" text="AE(E), WBSEDCL" />
+      <Label layoutX="21.0" layoutY="62.0" text="Version: 3.0.0" />
+      <Label layoutX="21.0" layoutY="79.0" text="Date of Release: 06.07.2017" />
+      <ImageView fitHeight="95.0" fitWidth="107.0" layoutX="113.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ABC.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
