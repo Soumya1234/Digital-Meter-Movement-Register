@@ -97,7 +97,7 @@ public class Log_In implements Initializable {
     	}
     	catch(Exception e)
     	{
-    		e.printStackTrace();
+    		Messages.ShowErrorMessage(e.toString(), "Error");
     	}
     }
 
