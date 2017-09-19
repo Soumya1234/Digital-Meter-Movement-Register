@@ -22,7 +22,7 @@ public class Authentication {
  * @return Boolean 
  * @throws NoSuchAlgorithmException 
  */
-   public static boolean isauthenticated(String User_Name,String Password) throws NoSuchAlgorithmException 
+   public static boolean isauthenticated(String User_Name,String Password) throws NoSuchAlgorithmException
    {
 	   try
 	   {
@@ -46,7 +46,7 @@ public class Authentication {
 	   }
 	   catch(SQLException e)
 	   {
-		   e.printStackTrace();
+		   Messages.ShowErrorMessage("Cannot connect to the database for authentication", "Error");
 	   }
 	   return false;
    }

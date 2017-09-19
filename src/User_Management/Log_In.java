@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import Exceptions.BlankFieldError;
+import Exceptions.GeneralError;
 import Exceptions.UserCreationError;
 import General_Support.Configure;
 import General_Support.Messages;
@@ -90,10 +91,12 @@ public class Log_In implements Initializable {
             	stage.setResizable(false);
             	stage.show();
             }
+            
             else
             {
-            	Messages.ShowErrorMessage("User Authentication Failed", "Error");
+            	throw new GeneralError("User Authentication Failed");
             }
+            
     	}
     	catch(Exception e)
     	{
